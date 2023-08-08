@@ -3,7 +3,10 @@
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
+   return array;
 }
+devolverPrimerElemento('pizza', 'hamburguesa', 'helado')
+console.log(devolverPrimerElemento('pizza', 'hamburguesa', 'helado'))
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.

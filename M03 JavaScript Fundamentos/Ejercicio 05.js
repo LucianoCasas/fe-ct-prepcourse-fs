@@ -9,11 +9,11 @@ function esPositivo(num) {
    // Si el número es 0, devuelve false.
    // Tu código:
    if(num>0){
-      return 'El número es positivo';
-   }else if(num==0){
-      return false;
+      return 'Es positivo';
+   }else if(num<0){
+      return 'Es negativo';
    }else{
-      return 'El número es negativo';
+      return false;
    }
 }
 esPositivo(-5);
@@ -82,45 +82,9 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
-   if(letra=='A'){
+   if(letra==='a'||letra==='e'||letra==='i'||letra==='o'||letra==='u'||letra==='A'||letra==='E'||letra==='I'||letra==='O'||letra==='U'){
       return 'Es vocal';
-   }else if(letra=='a'){
-      return 'Es vocal';
-   }else if(letra=='E'){
-      return 'Es vocal';
-   }else if(letra=='e'){
-      return 'Es vocal';
-   }else if(letra=='I'){
-      return 'Es vocal';
-   }else if(letra=='i'){
-      return 'Es vocal';
-   }else if(letra=='O'){
-      return 'Es vocal';
-   }else if(letra=='o'){
-      return 'Es vocal';
-   }else if(letra=='U'){
-      return 'Es vocal';
-   }else if(letra=='u'){
-      return 'Es vocal';
-   }else if(letra!='A'){
-      return 'Dato incorrecto';
-   }else if(letra!='a'){
-      return 'Dato incorrecto';
-   }else if(letra!='E'){
-      return 'Dato incorrecto';
-   }else if(letra!='e'){
-      return 'Dato incorrecto';
-   }else if(letra!='I'){
-      return 'Dato incorrecto';
-   }else if(letra!='i'){
-      return 'Dato incorrecto';
-   }else if(letra!='O'){
-      return 'Dato incorrecto';
-   }else if(letra!='o'){
-      return 'Dato incorrecto';
-   }else if(letra!='U'){
-      return 'Dato incorrecto';
-   }else if(letra!='u'){
+   }else{
       return 'Dato incorrecto';
    }
 }
