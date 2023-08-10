@@ -5,7 +5,7 @@ function obtenerMayor(x, y) {
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:
-   if(x>y){
+    if(x>y){
       return x;
    }else if(x<y){
       return y;
@@ -109,17 +109,13 @@ function estaEnRango(num) {
    // Retornar true si "num" es menor que 50 y mayor que 20.
    // De lo contrario, retornar false.
    // Tu código:
-   switch(num){
-      case num<50 :
-         return true;
-         case num>20 :
-            return true;
-      default:
-         return false;
+   if(num<50 && num>20){
+      return true;
+   }else{
+      return false;
    }
 }
 estaEnRango(45);
-console.log(estaEnRango(45))
 
 function esEntero(num) {
    // Retornar true si "num" es un entero, ya sea positivo, negativo o cero.
@@ -128,19 +124,13 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
-   switch(num){
-      case 0.8 :
-         return false;
-         case 1 :
-            return true;
-         case -10 :
-            return true;
-      default:
-         return false;
+   if(num%1==0){
+      return true;
+   }else{
+      return false;
    }
 }
 esEntero(0.8);
-console.log(esEntero())
 
 function fizzBuzz(num) {
    // Si "num" es divisible entre 3, retorna "fizz".
@@ -148,7 +138,17 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
+   if((num%3===0) && (num%5===0)){
+      return "fizzbuzz";
+   }else if(num%3===0){
+      return "fizz";
+   }else if(num%5===0){
+      return "buzz";
+   }else{
+      return false;
+   }
 }
+fizzBuzz(10);
 
 function operadoresLogicos(num1, num2, num3) {
    // La función recibe tres números distintos.
@@ -158,7 +158,20 @@ function operadoresLogicos(num1, num2, num3) {
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
+   if(num1>num2 && num1 >num3 && num1>0){
+      return "Numero 1 es mayor y positivo";
+   }if((num1||num2||num3)<0){
+      return "Hay negativos";
+   }if(num3>num1&&num2){
+      num3=num3+1;
+      return num3;
+   }if(num1===0 && num2===0 && num3===0){
+      return "Error";
+   }else{
+      return false;
+   }
 }
+operadoresLogicos(15,10,40);
 
 function esPrimo(num) {
    // Retornar true si "num" es primo.
@@ -167,27 +180,46 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   if(num<=0||num===1) return false;
+   for(var i=2;i<num;i++){
+      if(num%i===0) return false;
+      }
+      return true;
 }
+esPrimo(9);
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if(valor) return "Soy verdadero"
+   else return "Soy falso"
 }
+esVerdadero(1);
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   if(num>99&&num<1000) return true;
+   else return false;
 }
+tieneTresDigitos(101);
 
 function doWhile(num) {
    // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   
+   var contador=0;
+   do{
+      num=num+5;
+      contador++;
+   }while(contador<8){
+      return num;
+   }
 }
+doWhile(5);
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {

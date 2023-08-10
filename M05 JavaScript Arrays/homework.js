@@ -3,26 +3,37 @@
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
-   return array;
+   return array[0];
 }
-devolverPrimerElemento('pizza', 'hamburguesa', 'helado')
-console.log(devolverPrimerElemento('pizza', 'hamburguesa', 'helado'))
+devolverPrimerElemento('pizza');
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
+   return array[array.length-1]
 }
+devolverUltimoElemento('pizza');
+console.log(devolverUltimoElemento('pizza'));
 
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
+   return array.length
 }
+obtenerLargoDelArray('pizza');
 
 function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
+   var numeroArray=[];
+   for(var i=0;i<array.length;i++){
+      nuevoArray.push(array[i]+1);
+   }
+   return nuevoArray;
 }
+incrementarPorUno(8);
+console.log(incrementarPorUno(8));
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
